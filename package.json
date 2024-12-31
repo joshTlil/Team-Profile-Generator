@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "inquirer": "^12.3.0"
+  },
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Team Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Joshua Thomas",
+  "license": "ISC"
+}
