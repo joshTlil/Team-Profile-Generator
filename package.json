@@ -9,6 +9,7 @@
   "version": "1.0.0",
   "description": "Team Generator",
   "main": "index.js",
+  "type":"module",
   "directories": {
     "lib": "lib",
     "test": "test"
