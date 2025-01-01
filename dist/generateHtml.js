@@ -8,9 +8,9 @@ const generateHtml = (answers) =>
     <title>Team Generator</title>
 </head>
 <body>
-    <h1>${answers.name}</h1>
-    <h1>${answers.id}</h1>
-    <h1>${answers.email}</h1>
+    <h1>${answers[1].name}</h1>
+    <h1>${answers[1].id}</h1>
+    <h1>${answers[1].email}</h1>
 </body>
 </html>`
 
