@@ -12,16 +12,42 @@ const worker = [
     new Employee("John", 4545, "jidfjdf")
 ]
 
-const addArray = () =>{
-    return worker.push(new Employee("Visual", 2323, "jfdfjdf"))
+ const addArray = async () =>{
+    // let number = 1
+    await inquirer.prompt([
+    {
+        type: 'input',
+        name: 'name',
+        message: "Enter name",
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: "Enter id",
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter email",
+    },
+    ]).then((data)=>{
+        return worker.push(new Employee(data.name, data.id, data.email))
+    }).then(async()=>{
+        await askAgain()
+    })
+    
 }
 
-const start=() =>{
-    addArray()
+const askAgain = async() =>{
+console.log("Good bye")
+}
+
+const start= async() =>{
+   await addArray()
 // worker.push(new Employee("Action", 2323, "jfdfjdf"))
-worker.forEach(function(item){
-    console.log(item)
-})
+ worker.forEach(function (item) {
+        console.log(item);
+    })
 }
 
 // console.log("New updated array" + worker)
