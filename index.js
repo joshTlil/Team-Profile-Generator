@@ -38,8 +38,20 @@ const worker = [
     
 }
 
+
+//In order to use await keyword the function itself must be async
 const askAgain = async() =>{
-console.log("Good bye")
+    await inquirer.prompt([
+        {
+            type: 'confirm',
+            name: 'again',
+            message: "Enter name",
+        },
+    ]).then(async(data)=>{
+        if(data.again){
+            await addArray()
+        }
+    })
 }
 
 const start= async() =>{
