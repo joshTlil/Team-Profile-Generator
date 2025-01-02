@@ -6,6 +6,9 @@ import Employee from './lib/employee.js';
 //     if (err) throw err;
 //     console.log("The file has been created")
 // })
+//In order to add to array create the array outside the function 
+//So when the function is called it does not reset
+//And the new employees in the array are only created for that session
 
 const worker = [
     new Employee("Joshua", 2323, "jttasas"),
