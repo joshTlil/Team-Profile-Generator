@@ -12,8 +12,13 @@ const worker = [
     new Employee("John", 4545, "jidfjdf")
 ]
 
+const addArray = () =>{
+    return worker.push(new Employee("Visual", 2323, "jfdfjdf"))
+}
+
 const start=() =>{
-worker.push(new Employee("Action", 2323, "jfdfjdf"))
+    addArray()
+// worker.push(new Employee("Action", 2323, "jfdfjdf"))
 worker.forEach(function(item){
     console.log(item)
 })
@@ -21,4 +26,11 @@ worker.forEach(function(item){
 
 // console.log("New updated array" + worker)
 
+
+//TODO: 
+//Create the html page then use the DOM to target elements and add them
+//as the person keeps making employees
+//Make the limit 2 at the start 
+
+//Create html page when creating the manager, then add employees
 start()
