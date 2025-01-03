@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import { writeFile } from 'fs';
 import generateHtml from './dist/generateHtml.js';
 import Employee from './lib/employee.js';
+import Manager from './lib/manager.js';
 // writeFile("./dist/index.html", generateHtml(worker), (err)=>{
 //     if (err) throw err;
 //     console.log("The file has been created")
@@ -11,8 +12,8 @@ import Employee from './lib/employee.js';
 //And the new employees in the array are only created for that session
 
 const worker = [
-    new Employee("Joshua", 2323, "jttasas"),
-    new Employee("John", 4545, "jidfjdf")
+    // new Employee("Joshua", 2323, "jttasas"),
+    // new Employee("John", 4545, "jidfjdf")
 ]
 
  const addArray = async () =>{
@@ -41,6 +42,15 @@ const worker = [
     
 }
 
+const askRole = async () =>{
+    return await inquirer.prompt([
+        {type: 'input',
+         name: 'role',
+         message: 'Enter role'
+        }
+    ])
+}
+
 
 //In order to use await keyword the function itself must be async
 const askAgain = async() =>{
@@ -48,7 +58,7 @@ const askAgain = async() =>{
         {
             type: 'confirm',
             name: 'again',
-            message: "Enter name",
+            message: "Create again?",
         },
     ]).then(async(data)=>{
         if(data.again){
@@ -60,8 +70,17 @@ const askAgain = async() =>{
 const start= async() =>{
    await addArray()
 // worker.push(new Employee("Action", 2323, "jfdfjdf"))
- worker.forEach(function (item) {
+ worker.forEach(async(item) =>{
         console.log(item);
+        let userRole = await askRole()
+        console.log(userRole.role)
+        if(userRole.role === "Manager"){
+            const manager = new Manager(1234)
+            manager.getInfo(item.name, item.id, item.email)
+            // console.log(manager)
+            // console.log("Does this work?" + item)
+        }
+        
     })
 }
 
