@@ -25,7 +25,7 @@ const writeToFile = async(name, id, email) =>{
     // let data = myManager
     writeFile("./dist/index.html", generateHtml(name, id, email), (err)=>{
         if (err) throw err;
-        console.log("The file has been created")
+        // console.log("The file has been created")
     })
 
 }
@@ -88,18 +88,18 @@ const askAgain = async() =>{
     })
 }
 
-// const menu = async() =>{
-//     return await inquirer.prompt([
-//         {
-//             type: 'list',
-//             name: 'welcome',
-//             message: "Choose one",
-//             choices: ['Hello', 'GoodBye']
-//         }
-//     ]).then((data)=>{
-//        editHtml(data)
-//     })
-// }
+const menu = async() =>{
+   return await inquirer.prompt([
+        {
+            type: 'list',
+            name: 'welcome',
+            message: "Choose one",
+            choices: ['Hello', 'GoodBye']
+        }
+    ]).then((data)=>{
+        editHtml(data.welcome)
+    })
+}
 
 const start= async() =>{
    await addArray()
@@ -114,8 +114,9 @@ const start= async() =>{
         const manager = new Manager(1234)
         manager.getInfo(item.name, item.id, item.email)
         myManager.push(manager)
-        writeToFile(item.name, item.id, item.email)
+        await writeToFile(item.name, item.id, item.email)
         // console.log("Does this work?" + item)
+        await menu()
     }
     
 })
