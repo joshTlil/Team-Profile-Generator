@@ -1,8 +1,9 @@
 import inquirer from 'inquirer';
-import { writeFile } from 'fs';
+import { appendFile, writeFile } from 'fs';
 import generateHtml from './dist/generateHtml.js';
 import Employee from './lib/employee.js';
 import Manager from './lib/manager.js';
+import employeeGenerate from './employeeHtml.js';
 // writeFile("./dist/index.html", generateHtml(worker), (err)=>{
 //     if (err) throw err;
 //     console.log("The file has been created")
@@ -15,6 +16,19 @@ const worker = [
     // new Employee("Joshua", 2323, "jttasas"),
     // new Employee("John", 4545, "jidfjdf")
 ]
+
+const myManager = [
+
+]
+
+const writeToFile = async(name, id, email) =>{
+    // let data = myManager
+    writeFile("./dist/index.html", generateHtml(name, id, email), (err)=>{
+        if (err) throw err;
+        console.log("The file has been created")
+    })
+
+}
 
  const addArray = async () =>{
     // let number = 1
@@ -51,6 +65,13 @@ const askRole = async () =>{
     ])
 }
 
+const editHtml = async(data) =>{
+    appendFile("./dist/index.html", employeeGenerate(data), (err)=>{
+        if (err) throw err
+        console.log("File has been updated")
+    })
+}
+
 
 //In order to use await keyword the function itself must be async
 const askAgain = async() =>{
@@ -67,22 +88,42 @@ const askAgain = async() =>{
     })
 }
 
+// const menu = async() =>{
+//     return await inquirer.prompt([
+//         {
+//             type: 'list',
+//             name: 'welcome',
+//             message: "Choose one",
+//             choices: ['Hello', 'GoodBye']
+//         }
+//     ]).then((data)=>{
+//        editHtml(data)
+//     })
+// }
+
 const start= async() =>{
    await addArray()
 // worker.push(new Employee("Action", 2323, "jfdfjdf"))
- worker.forEach(async(item) =>{
-        console.log(item);
-        let userRole = await askRole()
-        console.log(userRole.role)
-        if(userRole.role === "Manager"){
-            const manager = new Manager(1234)
-            manager.getInfo(item.name, item.id, item.email)
-            // console.log(manager)
-            // console.log("Does this work?" + item)
-        }
-        
-    })
+
+   .then(()=>{        
+    worker.forEach(async(item) =>{
+    console.log(item);
+    let userRole = await askRole()
+    console.log(userRole.role)
+    if(userRole.role === "Manager"){
+        const manager = new Manager(1234)
+        manager.getInfo(item.name, item.id, item.email)
+        myManager.push(manager)
+        writeToFile(item.name, item.id, item.email)
+        // console.log("Does this work?" + item)
+    }
+    
+})
+})
+
 }
+
+
 
 // console.log("New updated array" + worker)
 
