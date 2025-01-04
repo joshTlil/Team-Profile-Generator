@@ -66,7 +66,12 @@ const askRole = async () =>{
 }
 
 const editHtml = async(data) =>{
-    appendFile("./dist/index.html", employeeGenerate(data), (err)=>{
+    //TODO:
+    //Maybe have a txt html file first,and when user is done creating a team then take
+    //all that data and then turn into an html file 
+    //Come back to this later
+    const modify = data.replace('<footer></footer>', `<h1>${data}</h1>`)
+    writeFile("./dist/index.html", employeeGenerate(modify), (err)=>{
         if (err) throw err
         console.log("File has been updated")
     })
