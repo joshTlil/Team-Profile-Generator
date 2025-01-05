@@ -1,6 +1,7 @@
 import employeeGenerate from "../employeeHtml.js";
+import template from "./template.js";
 
-const generateHtml = (name, id, email) =>
+const generateHtml = (name, id, email, comment) =>
 //     for(let i = 0; i < answers.length; i++){
 
     
@@ -28,10 +29,7 @@ const generateHtml = (name, id, email) =>
     <title>Team Generator</title>
 </head>
 <body>
-    <h1>${name}</h1>
-    <h1>${id}</h1>
-    <h1>${email}</h1>
-    <footer></footer>
+<replace>
 </body>
 </html>`
 

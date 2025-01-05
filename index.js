@@ -1,9 +1,10 @@
 import inquirer from 'inquirer';
-import { appendFile, writeFile } from 'fs';
+import { appendFile, writeFile, readFile } from 'fs';
 import generateHtml from './dist/generateHtml.js';
 import Employee from './lib/employee.js';
 import Manager from './lib/manager.js';
 import employeeGenerate from './employeeHtml.js';
+import template from './dist/template.js';
 // writeFile("./dist/index.html", generateHtml(worker), (err)=>{
 //     if (err) throw err;
 //     console.log("The file has been created")
@@ -23,7 +24,7 @@ const myManager = [
 
 const writeToFile = async(name, id, email) =>{
     // let data = myManager
-    writeFile("./dist/index.html", generateHtml(name, id, email), (err)=>{
+    writeFile("./dist/index.txt", template(name, id, email), (err)=>{
         if (err) throw err;
         // console.log("The file has been created")
     })
@@ -71,10 +72,25 @@ const editHtml = async(data) =>{
     //all that data and then turn into an html file 
     //Come back to this later
     const modify = data.replace('<footer></footer>', `<h1>${data}</h1>`)
-    writeFile("./dist/index.html", employeeGenerate(modify), (err)=>{
+    appendFile("./dist/index.txt", employeeGenerate(modify), (err)=>{
         if (err) throw err
         console.log("File has been updated")
     })
+    await completeNow()
+}
+
+const completeNow = async() =>{
+    readFile('./dist/index.txt', 'utf8', (err, data) => {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        const modify = data.replace('<h1>Hello World!</h1>', data)
+    appendFile("./dist/index.html", modify, (err)=>{
+        if (err) throw err
+        console.log("Html updated")
+    })
+})
 }
 
 
