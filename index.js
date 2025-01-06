@@ -13,6 +13,10 @@ import template from './dist/template.js';
 //So when the function is called it does not reset
 //And the new employees in the array are only created for that session
 
+
+//TODO:
+//Maybe create a forEach function when creating template for employees
+
 const worker = [
     // new Employee("Joshua", 2323, "jttasas"),
     // new Employee("John", 4545, "jidfjdf")
