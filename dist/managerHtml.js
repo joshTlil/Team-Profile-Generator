@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+const managerHtml = (manager) =>
+    `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,11 +8,10 @@
     <title>Team Generator</title>
 </head>
 <body>
-<h1>Hello World!</h1>
-</body>
-</html><h1>Joshua</h1>
-    <h1>121212</h1>
-    <h1>fjnuidifdf</h1>
-    <h1>Hello</h1>
-</body>
-</html>
+<h1>${manager.name}</h1>
+<h1>${manager.id}</h1>
+<h1>${manager.email}</h1>
+<h1>${manager.officeNumber}</h1>
+`
+
+export default managerHtml
