@@ -5,6 +5,7 @@ import Employee from './lib/employee.js';
 import Manager from './lib/manager.js';
 import managerHtml from './dist/managerHtml.js';
 import engineerHtml from './dist/engineerhtml.js';
+import internHtml from './dist/internHtml.js';
 
 
 
@@ -37,6 +38,35 @@ const createEngineer = () =>{
     }).then(()=>askAgain())
 }
 
+const createIntern = () =>{
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Enter interns name',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter interns id',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter interns email',
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Enter interns school',
+        },
+    ]).then((data)=>{
+        appendFile("./dist/index.txt", internHtml(data), (err)=>{
+            if (err) throw err
+        })
+    }).then(()=>askAgain())
+}
+
 const askAgain =()=>{
     inquirer.prompt([
         {
@@ -44,7 +74,13 @@ const askAgain =()=>{
             name: 'question',
             message: 'Do you want to continue'
         }
-    ]).then(()=>console.log("To be continued"))
+    ]).then((data)=>{
+        if (!data.question){
+            console.log("GoodBye")
+        }else{
+            menu()
+        }
+    })
 }
 
 
@@ -62,7 +98,7 @@ const menu = () =>{
                 createEngineer()
                 break;
             case 'Intern':
-                // createIntern()
+                createIntern()
                 console.log("To be continued")
                 break;
             default:
