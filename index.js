@@ -99,7 +99,6 @@ const menu = () =>{
                 break;
             case 'Intern':
                 createIntern()
-                console.log("To be continued")
                 break;
             default:
                 console.log("GoodBye")
