@@ -7,14 +7,19 @@ const managerHtml = (manager) =>
     <link rel="stylesheet" href="style.css">
     <title>Team Generator</title>
 </head>
-<header>My Team</header>
+<header><h1>My Team</h1></header>
 <body>
 <div class="flexContainer">
 <div class="card" id="manager">
+<div class="cardHeader">
 <h1>${manager.name}</h1>
-<h1>${manager.id}</h1>
-<h1>${manager.email}</h1>
-<h1>${manager.officeNumber}</h1>
+<h1>Manager</h1>
+</div>
+<div class="info">
+<h1 class="id">${manager.id}</h1>
+<h1 class="email">${manager.email}</h1>
+<h1 class="num">${manager.officeNumber}</h1>
+</div>
 </div>
 `
 
