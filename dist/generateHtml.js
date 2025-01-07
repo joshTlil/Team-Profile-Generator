@@ -29,6 +29,7 @@ const generateHtml = (name, id, email, comment) =>
     <title>Team Generator</title>
 </head>
 <body>
+<header>My Team</header>
 `
 
 export default generateHtml;

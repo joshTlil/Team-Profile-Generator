@@ -7,6 +7,7 @@ const managerHtml = (manager) =>
     <link rel="stylesheet" href="style.css">
     <title>Team Generator</title>
 </head>
+<header>My Team</header>
 <body>
 <h1>${manager.name}</h1>
 <h1>${manager.id}</h1>

@@ -6,18 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <title>Team Generator</title>
 </head>
+<header>My Team</header>
 <body>
 <h1>Joshua</h1>
-<h1>333333</h1>
-<h1>gfdgf@dfnf</h1>
-<h1>123434</h1>
-<h1>John </h1>
-<h1>sds</h1>
-<h1>hfhdf</h1>
-<h1>dfdfjn</h1>
-<h1>Gabe </h1>
-<h1>12121212</h1>
-<h1>sd#sdsd</h1>
-<h1>fd</h1>
+<h1>1029</h1>
+<h1>sjdsdsd</h1>
+<h1>99393</h1>
+<h1>idfdf</h1>
+<h1>dffd</h1>
+<h1>dff</h1>
+<h1>dfdf</h1>
 </body>
 </html>
