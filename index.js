@@ -6,6 +6,7 @@ import Manager from './lib/manager.js';
 import managerHtml from './dist/managerHtml.js';
 import engineerHtml from './dist/engineerhtml.js';
 import internHtml from './dist/internHtml.js';
+import footer from './dist/footer.js';
 
 
 
@@ -76,7 +77,19 @@ const askAgain =()=>{
         }
     ]).then((data)=>{
         if (!data.question){
-            console.log("GoodBye")
+            appendFile("./dist/index.txt", footer(), (err)=>{
+                if (err) throw err
+            })
+            const data = readFile("./dist/index.txt", 'utf8', (err, data)=>{
+                if (err) throw err
+                console.log(data)
+                writeFile("./dist/index.html", data, (err)=>{
+                    if (err) throw err
+                })
+            })
+            // writeFile("./dist/index.html", data, (err)=>{
+            //     if (err) throw err
+            // })
         }else{
             menu()
         }
