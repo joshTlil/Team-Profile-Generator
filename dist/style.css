@@ -5,3 +5,45 @@ header{
     color: white;
     border: 10px solid red;
 }
+
+
+.flexContainer{
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+.card{
+    border: 1px solid black;
+    height:20em;
+    width: 15em;
+    margin-left: 5em;
+    
+}
+
+.cardHeader{
+    background-color: rgb(27, 115, 216);
+    color: white;
+    margin-top: -1.35em;
+}
+
+.id{
+    border-bottom: 1px solid grey;
+}
+
+.email{
+    border-bottom: 1px solid grey;
+}
+
+.num{
+    border-bottom: 1px solid grey;
+}
+
+.github{
+    border-bottom: 1px solid grey;
+}
+
+.info{
+    width: 15em;
+    height: 15em;
+}

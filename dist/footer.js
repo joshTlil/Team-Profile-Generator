@@ -1,5 +1,6 @@
 const footer = () =>
-`</body>
+`</div>
+</body>
 </html>`
 
 export default footer

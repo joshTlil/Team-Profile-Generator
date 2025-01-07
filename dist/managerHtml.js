@@ -9,10 +9,13 @@ const managerHtml = (manager) =>
 </head>
 <header>My Team</header>
 <body>
+<div class="flexContainer">
+<div class="card" id="manager">
 <h1>${manager.name}</h1>
 <h1>${manager.id}</h1>
 <h1>${manager.email}</h1>
 <h1>${manager.officeNumber}</h1>
+</div>
 `
 
 export default managerHtml
