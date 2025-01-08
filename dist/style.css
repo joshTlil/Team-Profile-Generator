@@ -42,6 +42,9 @@ header{
 .github{
     border-bottom: 1px solid grey;
 }
+.school{
+    border-bottom: 1px solid grey;
+}
 
 .info{
     width: 15em;

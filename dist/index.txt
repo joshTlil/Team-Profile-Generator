@@ -6,29 +6,95 @@
     <link rel="stylesheet" href="style.css">
     <title>Team Generator</title>
 </head>
-<header>My Team</header>
+<header><h1>My Team</h1></header>
 <body>
 <div class="flexContainer">
 <div class="card" id="manager">
 <div class="cardHeader">
-<h1>Joshua</h1>
+<h1>djfdf</h1>
 <h1>Manager</h1>
 </div>
 <div class="info">
-<h1 class="id">1</h1>
-<h1 class="email">dskdjsjd</h1>
-<h1 class="num">1213</h1>
+<h1 class="id">df</h1>
+<h1 class="email">df</h1>
+<h1 class="num">dfdf</h1>
 </div>
 </div>
 <div class="card" id="engineer">
 <div class="cardHeader">
-<h1>John </h1>
+<h1>dfdfd</h1>
 <h1>Engineer</h1>
 </div>
 <div class="info">
-<h1 class="id">2</h1>
-<h1 class="email">kjfdfdf</h1>
-<h1 class="github">ksdfdkf</h1>
+<h1 class="id">df</h1>
+<h1 class="email">df</h1>
+<h1 class="github">df</h1>
+</div>
+</div>
+<div class="card" id="intern">
+<div class="cardHeader">
+<h1>djhfd</h1>
+<h1>Intern</h1>
+</div>
+<div class="info">
+<h1 class="id">fdf</h1>
+<h1 class="email">dff</h1>
+<h1 class="school">d</h1>
+</div>
+</div>
+<div class="card" id="intern">
+<div class="cardHeader">
+<h1>fdnfjf</h1>
+<h1>Intern</h1>
+</div>
+<div class="info">
+<h1 class="id">df</h1>
+<h1 class="email">df</h1>
+<h1 class="school">df</h1>
+</div>
+</div>
+<div class="card" id="engineer">
+<div class="cardHeader">
+<h1>dfhdfd</h1>
+<h1>Engineer</h1>
+</div>
+<div class="info">
+<h1 class="id">d</h1>
+<h1 class="email">fdf</h1>
+<h1 class="github"></h1>
+</div>
+</div>
+<div class="card" id="engineer">
+<div class="cardHeader">
+<h1>fjkfjg</h1>
+<h1>Engineer</h1>
+</div>
+<div class="info">
+<h1 class="id">fg</h1>
+<h1 class="email">f</h1>
+<h1 class="github">g</h1>
+</div>
+</div>
+<div class="card" id="intern">
+<div class="cardHeader">
+<h1>fgfkgfg</h1>
+<h1>Intern</h1>
+</div>
+<div class="info">
+<h1 class="id">fg</h1>
+<h1 class="email">f</h1>
+<h1 class="school">g</h1>
+</div>
+</div>
+<div class="card" id="intern">
+<div class="cardHeader">
+<h1>dfjdhf</h1>
+<h1>Intern</h1>
+</div>
+<div class="info">
+<h1 class="id">dfd</h1>
+<h1 class="email">f</h1>
+<h1 class="school"></h1>
 </div>
 </div>
 </div>
