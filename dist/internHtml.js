@@ -5,9 +5,9 @@ const internHtml = (intern) =>
 <h1>Intern</h1>
 </div>
 <div class="info">
-<h1 class="id">${intern.id}</h1>
-<h1 class="email">${intern.email}</h1>
-<h1 class="school">${intern.school}</h1>
+<p class="id">ID:${intern.id}</p>
+<a href="#">Email:${intern.email}</a>
+<p class="school">Office number:${intern.school}</p>
 </div>
 </div>
 ` 

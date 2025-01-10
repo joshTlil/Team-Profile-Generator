@@ -16,9 +16,9 @@ const managerHtml = (manager) =>
 <h1>Manager</h1>
 </div>
 <div class="info">
-<h1 class="id">${manager.id}</h1>
-<h1 class="email">${manager.email}</h1>
-<h1 class="num">${manager.officeNumber}</h1>
+<p class="id">ID:${manager.id}</p>
+<a href="#">Email:${manager.email}</a>
+<p class="num">Office number:${manager.officeNumber}</p>
 </div>
 </div>
 `
